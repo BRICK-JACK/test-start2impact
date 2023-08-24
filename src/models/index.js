@@ -41,9 +41,13 @@ studentModel.courses = studentModel.belongsToMany(courseModel, {
 instructorModel.courses = instructorModel.hasMany(courseModel)
 courseModel.Instructor = courseModel.belongsTo(instructorModel)
 
-models['Utente'] = courseModel
-models['Azienda'] = enrollmentModel
-models['AziendaMap'] = instructorModel
-models['Session'] = studentModel
+models['Course'] = courseModel
+models['Enrollment'] = enrollmentModel
+models['Instructor'] = instructorModel
+models['Student'] = studentModel
 
-export default models
+export default {
+    models,
+    sequelizeConnection,
+    Sequelize
+}

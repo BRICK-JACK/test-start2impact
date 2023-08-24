@@ -6,6 +6,9 @@ const config = {
       database: "test-start2impact",
       host: "localhost",
       dialect: "mysql"
+    },
+    server: {
+      "port": 8080
     }
 }
 
