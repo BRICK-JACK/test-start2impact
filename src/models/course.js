@@ -15,6 +15,10 @@ const Course = (sequelizeConnection, Sequelize) => {
             allowNull: true,
             defaultValue: null
         },
+        level: {
+            type: Sequelize.INTEGER,
+            allowNull: false,
+        },
         startDate: {
             type: Sequelize.DATEONLY,
             allowNull: false,
