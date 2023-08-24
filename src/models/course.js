@@ -1,7 +1,5 @@
-import Sequelize from 'sequelize'
-
-const Course = (sequelize) => 
-    sequelize.define('course', {
+const Course = (sequelizeConnection, Sequelize) => {
+    return sequelizeConnection.define('course', {
         courseId: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
@@ -33,5 +31,5 @@ const Course = (sequelize) =>
         },
         timestamps: false
     })
-
+}
 export default Course

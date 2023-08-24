@@ -1,7 +1,5 @@
-import Sequelize from 'sequelize'
-
-const Student = (sequelize) => 
-    sequelize.define('student', {
+const Student = (sequelizeConnection, Sequelize) => 
+    sequelizeConnection.define('student', {
         studentId: {
             type: Sequelize.INTEGER,
             autoIncrement: true,

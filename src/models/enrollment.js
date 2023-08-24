@@ -1,7 +1,5 @@
-import Sequelize from 'sequelize'
-
-const Enrollment = (sequelize) => 
-    sequelize.define('enrollment', {
+const Enrollment = (sequelizeConnection, Sequelize) => 
+    sequelizeConnection.define('enrollment', {
         studentId: {
             type: Sequelize.INTEGER,
             allowNull: false,
